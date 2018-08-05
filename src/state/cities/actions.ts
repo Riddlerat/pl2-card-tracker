@@ -10,6 +10,12 @@ export interface IAddCityAction {
   type: "CITY_ADD";
 }
 
+export interface ISetCardCountAction {
+  name: string;
+  cardCount: number;
+  type: "CITY_SET_CARD_COUNT";
+}
+
 export interface ISetCityRiskAction {
   name: string;
   risk: boolean;
@@ -20,6 +26,17 @@ export function add(name: string): IAddCityAction {
   return {
     name,
     type: "CITY_ADD",
+  };
+}
+
+export function setCardCount(
+  name: string,
+  cardCount: number,
+): ISetCardCountAction {
+  return {
+    cardCount,
+    name,
+    type: "CITY_SET_CARD_COUNT",
   };
 }
 

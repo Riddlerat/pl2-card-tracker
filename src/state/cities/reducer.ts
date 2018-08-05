@@ -37,6 +37,15 @@ export default function reducer(
         return city;
       }) as Set<City>;
     }
+    case "CITY_SET_CARD_COUNT": {
+      const { cardCount, name } = action;
+      return state.map((city: City) => {
+        if (city.name === name) {
+          return city.set("cardTotal", cardCount);
+        }
+        return city;
+      }) as Set<City>;
+    }
   }
 
   return state;

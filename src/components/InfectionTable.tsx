@@ -180,6 +180,7 @@ class CityRowControls extends React.Component<ICityRowControlsProps> {
       <th className={risk + "city"}>
         <input type="checkbox" onChange={this.handleRisk} checked={isAtRisk} />
         <span className="name">{name}</span>
+        <input type="number" defaultValue="0" min="0" max="9" />
         <button
           className="action-btn infect"
           onClick={this.handleInfect}
