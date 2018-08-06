@@ -2,6 +2,7 @@ import { IInitialAction } from "../actions";
 
 export type TCitiesAction =
   | IAddCityAction
+  | ISetCardCountAction
   | ISetCityRiskAction
   | IInitialAction;
 
